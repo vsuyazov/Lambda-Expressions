@@ -7,11 +7,11 @@ public class Calculator extends Exception {
     BinaryOperator<Integer> plus = Integer::sum;
     BinaryOperator<Integer> minus = (x, y) -> x - y;
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
-    BinaryOperator<Integer> devide = (x, y) -> {
+    BinaryOperator<Integer> devide = (x, y) -> {            //Ошибка возникала при делении на ноль
         try {
             return x / y;
         } catch (ArithmeticException exception) {
-            System.out.print("Деление на ");
+            System.out.print("Ошибка! Деление на ");
         }
         return y;
     };
